@@ -48,7 +48,7 @@ Le CTF s'est déroulé du 14 au 28 mars 2023 en ligne.
    <tr><td rowspan=9>Reverse Engineering</td>
          <td><a href="./Reverse Engineering/Ready Gladiator 0/Ready Gladiator 0.md">Ready Gladiator 0</a></td><td>100</td><td>:heavy_check_mark:</td>
      <tr><td><a href="./Reverse Engineering/Reverse/Reverse.md">Reverse</a></td><td>100</td><td>:heavy_check_mark:</td>
-     <tr><td><a href="./Reverse Engineering/Safe Opener 2SB/Safe Opener 2.md">Safe Opener 2</a></td><td>100</td><td>:heavy_check_mark:</td>
+     <tr><td><a href="./Reverse Engineering/Safe Opener 2/Safe Opener 2.md">Safe Opener 2</a></td><td>100</td><td>:heavy_check_mark:</td>
      <tr><td><a href="./Reverse Engineering/timer/timer.md">timer</a></td><td>100</td><td>:heavy_check_mark:</td>
      <tr><td>Virtual Machine 0</td><td>100</td><td>:x:</td>
      <tr><td>No way out</td><td>200</td><td>:x:</td>
