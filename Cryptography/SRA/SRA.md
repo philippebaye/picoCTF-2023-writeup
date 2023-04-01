@@ -44,7 +44,7 @@ Par rapport à l'algorithme RSA, on dispose donc des 3 informations suivantes :
 
 `d` étant l'inverse modulaire de `e` vis-à-vis de `phi(n)` (i.e. $\ d \cdot e \equiv 1\ [\phi(n)]$ ), on a donc : 
 
-$$ il\ existe\ k\ tel\ que\ \: \ d \cdot e = 1 + k \cdot \phi(n) <=> \ d \cdot e -1 =k \cdot (p-1) \cdot (q-1) $$
+$$ \exists\ k\ |\ d \cdot e = 1 + k \cdot \phi(n) <=> \ d \cdot e -1 =k \cdot (p-1) \cdot (q-1) $$
 
 Connaissant `d` et `e`, on connait donc $k \cdot (p-1) \cdot (q-1)$
 
