@@ -44,13 +44,13 @@ Par rapport à l'algorithme RSA, on dispose donc des 3 informations suivantes :
 
 `d` étant l'inverse modulaire de `e` vis-à-vis de `phi(n)` (i.e. $\ d \cdot e \equiv 1\ [\phi(n)]$ ), on a donc : 
 
-$$\exist\ k\ |\ d \cdot e = 1 + k \cdot \phi(n) <=> \ d \cdot e -1 =k \cdot (p-1) \cdot (q-1)$$
+$$ il\ existe\ k\ tel\ que\ \: \ d \cdot e = 1 + k \cdot \phi(n) <=> \ d \cdot e -1 =k \cdot (p-1) \cdot (q-1) $$
 
 Connaissant `d` et `e`, on connait donc $k \cdot (p-1) \cdot (q-1)$
 
 Les valeurs n'étant pas trop grande, il est possible de décomposer celui-ci en produit de facteurs premiers, en un temps raisonnablement rapide sans nécessiter une puissance de calcul démesurée.
 
-$$d \cdot e - 1 = \prod_{i=0}^{m} P_{i} \ => \ prime\_ factors = \{P_{0}, P_{1}, ..., P_{m}\}$$
+$$d \cdot e - 1 = \prod_{i=0}^{m} P_{i} \ => \ prime\\_factors = \{P_{0}, P_{1}, ..., P_{m}\}$$
 
 NB : La liste des facteurs premiers ainsi obtenues peut contenir des doublons.
 
@@ -73,38 +73,44 @@ Pourquoi au moins 2 facteurs ? Les facteurs étant premiers, ils sont :
 - soit égal à 2. Lorsqu'on ajoute 1 la somme (i.e. 3) est un nombre < 128 bits.
 
 Contrainte supplémentaire, un facteur ne peut pas à la fois servir pour définir `p` et `q`.  
-Donc si :
-$$prime\_factors\_p = \{P_{j_0}, P_{j_1}, ..., P_{j_{p}}\}$$
-$$prime\_factors\_q = \{P_{k_0}, P_{k_1}, ..., P_{k_{q}}\}$$
+Donc si :  
+
+$$prime\\_factors\\_p = \{P_{j_0}, P_{j_1}, ..., P_{j_{p}}\}$$
+
+$$prime\\_factors\\_q = \{P_{k_0}, P_{k_1}, ..., P_{k_{q}}\}$$
+
 Alors :
-$$prime\_factors\_p + prime\_factors\_q \subset prime\_ factors$$
+$$prime\\_factors\\_p + prime\\_factors\\_q \subset prime\\_factors$$
 
 Comme `prime_factors_p` est composé d'au moins 2 éléments, `prime_factors_q` contient au plus (nombre d'éléments de `prime_factors` - 2). Et inversement.  
 Donc :
-$$2 \le count(prime\_factors\_p) \le count(prime\_factors) - 2$$
-$$2 \le count(prime\_factors\_q) \le count(prime\_factors) - 2$$
+$$2 \le count(prime\\_factors\\_p) \le count(prime\\_factors) - 2$$
+$$2 \le count(prime\\_factors\\_q) \le count(prime\\_factors) - 2$$
 
 Si on définit : 
 * `min_count` comme étant le nombre d'éléments de la plus petite combinaison des facteurs premiers trouvée `prime_factors_p`,
-    $$min\_count = min(prime\_factors\_p_{0}, prime\_factors\_p_{1}, prime\_factors\_p_{x})$$
+
+$$min\\_count = min(prime\\_factors\\_p_{0}, prime\\_factors\\_p_{1}, prime\\_factors\\_p_{x})$$
+
 * `max_count` comme étant le nombre d'éléments de la plus grande combinaison possible des facteurs premiers `prime_factors_q`
-    $$max\_count = max(prime\_factors\_q_{0}, prime\_factors\_q_{1}, prime\_factors\_q_{y})$$
+
+$$max\\_count = max(prime\\_factors\\_q_{0}, prime\\_factors\\_q_{1}, prime\\_factors\\_q_{y})$$
 
 On a la relation :
-$$max\_count \le count(prime\_factors) - min\_count$$
+$$max\\_count \le count(prime\\_factors) - min\\_count$$
 
 Donc chaque combinaison des facteurs premiers doit valider la contrainte :
-$$min\_count \le count(prime\_factors\_p) \le count(prime\_factors) - min\_count$$
-$$min\_count \le count(prime\_factors\_q) \le count(prime\_factors) - min\_count$$
+$$min\\_count \le count(prime\\_factors\\_p) \le count(prime\\_factors) - min\\_count$$
+$$min\\_count \le count(prime\\_factors\\_q) \le count(prime\\_factors) - min\\_count$$
 
 ---
 
 ### Etape 3 : identification des couples (`p`, `q`) candidats
 
-Maintenant que l'on a écarté un certain nombre de combinaison de facteurs premiers, on doit trouver des couples de combinaisons qui associées permettent d'avoir un `p` et `q`.
+Maintenant que l'on a écarté un certain nombre de combinaison de facteurs premiers, on   doit trouver des couples de combinaisons qui associées permettent d'avoir un `p` et `q`.
 
 On essaie les différentes associations possibles, sachant qu'elles doivent répondre (pour rappel) à la contrainte suivante :
-$$prime\_factors\_p + prime\_factors\_q \subset prime\_ factors$$
+$$prime\\_factors\\_p + prime\\_factors\\_q \subset prime\\_factors$$
 
 A partir des couples (`p`, `q`) identifiés, on essaie de déchiffrer le message chiffré `C` et de retrouver le message en clair `M`.  
 Pour rappel de l'algorithme RSA, on a :
