@@ -19,7 +19,7 @@ On utilise Wireshark pour analyser le fichier `trace.pcap` fourni.
 
 ## Solution
 
-On cherche des trames susceptibles de contenir le flag, à savoir contenant une chaîne de caractères contenant picoCTF.
+A l'aide de Wireshark, on cherche des trames susceptibles de contenir le flag, à savoir contenant une chaîne de caractères contenant picoCTF.
 
 On peut parcourir les trames une à une et regarder si on trouve quelque chose d'intéressant.
 
