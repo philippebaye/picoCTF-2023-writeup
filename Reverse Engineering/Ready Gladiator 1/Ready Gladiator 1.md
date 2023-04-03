@@ -19,4 +19,29 @@ Hints :
 
 ## Approche
 
+Le guide https://vyznev.net/corewar/guide.html fournit des exemples intéressants de Warriors.
+
+
 ## Solution
+
+On s'appuie sur celles du Nain : https://vyznev.net/corewar/guide.html#start_dwarf
+
+La soumission des instructions suivantes permet de résoudre le challenge :
+```
+;assert 1
+add #4, 3
+mov 2, @2
+jmp -2
+dat #0, #0
+end
+```
+
+Le résultat du duel est le suivant :
+```
+Rounds: 100
+Warrior 1 wins: 30
+Warrior 2 wins: 0
+Ties: 70
+You did it!
+picoCTF{1mp_1n_7h3_cr055h41r5_xxxxxxxx}
+```
