@@ -18,4 +18,14 @@ Hints :
 
 ## Approche
 
+On dispose d'une archive Android `timer.apk`.
+
+Le flag est caché parmi les fichiers constituant l'archive.
+
+
 ## Solution
+
+Le flag est présent dans différents fichiers :
+* AndroidManifest.xml
+* classes3.dex
+* ...
