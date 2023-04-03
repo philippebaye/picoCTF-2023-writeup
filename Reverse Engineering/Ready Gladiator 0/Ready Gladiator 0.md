@@ -19,4 +19,26 @@ Hints :
 
 ## Approche
 
+Quelques recherches sur internet nous en apprennent plus sur Core War et le langage de propgrammation Redcode : https://fr.wikipedia.org/wiki/Core_War
+
+On trouve également un tutotiel : https://vyznev.net/corewar/guide.html
+
+
 ## Solution
+
+La soumission des instructions suivantes permet de résoudre le challenge :
+```
+;assert 1
+mov 1, 1
+end
+```
+
+Le résultat du duel est le suivant :
+```
+Rounds: 100
+Warrior 1 wins: 0
+Warrior 2 wins: 100
+Ties: 0
+You did it!
+picoCTF{h3r0_t0_z3r0_4m1r1gh7_xxxxxxxx}
+```
