@@ -1,6 +1,7 @@
 # picoCTF 2023
 
-Voici les réflexions menées lors de ma participation en individuel au picoCTF 2023 pour résoudre les [challenges proprosés](https://play.picoctf.org/practice?originalEvent=72).<br/>
+Voici les réflexions menées lors de ma participation en individuel au picoCTF 2023 pour résoudre les [challenges proposés](https://play.picoctf.org/practice?originalEvent=72).<br/>
+Des solutions plus élégantes existent, mais celles-ci sont les miennes.<br/>
 Le CTF s'est déroulé du 14 au 28 mars 2023 en ligne.
 
 ## Résultat
