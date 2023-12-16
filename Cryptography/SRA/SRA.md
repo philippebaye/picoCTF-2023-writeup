@@ -50,7 +50,7 @@ Connaissant `d` et `e`, on connait donc $k \cdot (p-1) \cdot (q-1)$
 
 Les valeurs n'étant pas trop grande, il est possible de décomposer celui-ci en produit de facteurs premiers, en un temps raisonnablement rapide sans nécessiter une puissance de calcul démesurée.
 
-$$d \cdot e - 1 = \prod_{i=0}^{m} P_{i} \ => \ prime\\_factors = \{P_{0}, P_{1}, ..., P_{m}\}$$
+$$d \cdot e - 1 = \prod_{i=0}^{m} P_{i} \ => \ prime\\\_factors = \{P_{0}, P_{1}, ..., P_{m}\}$$
 
 NB : La liste des facteurs premiers ainsi obtenues peut contenir des doublons.
 
@@ -75,9 +75,9 @@ Pourquoi au moins 2 facteurs ? Les facteurs étant premiers, ils sont :
 Contrainte supplémentaire, un facteur ne peut pas à la fois servir pour définir `p` et `q`.  
 Donc si :  
 
-$$prime\\_factors\\_p = \{P_{j_0}, P_{j_1}, ..., P_{j_{p}}\}$$
+$$prime\\\_factors\\\_p = \{P_{j_0}, P_{j_1}, ..., P_{j_{p}}\}$$
 
-$$prime\\_factors\\_q = \{P_{k_0}, P_{k_1}, ..., P_{k_{q}}\}$$
+$$prime\\\_factors\\\_q = \{P_{k_0}, P_{k_1}, ..., P_{k_{q}}\}$$
 
 Alors :
 $$prime\\_factors\\_p + prime\\_factors\\_q \subset prime\\_factors$$
@@ -90,11 +90,11 @@ $$2 \le count(prime\\_factors\\_q) \le count(prime\\_factors) - 2$$
 Si on définit : 
 * `min_count` comme étant le nombre d'éléments de la plus petite combinaison des facteurs premiers trouvée `prime_factors_p`,
 
-$$min\\_count = min(prime\\_factors\\_p_{0}, prime\\_factors\\_p_{1}, prime\\_factors\\_p_{x})$$
+$$min\\\_count = min(prime\\\_factors\\\_p_{0}, prime\\\_factors\\\_p_{1}, prime\\\_factors\\\_p_{x})$$
 
 * `max_count` comme étant le nombre d'éléments de la plus grande combinaison possible des facteurs premiers `prime_factors_q`
 
-$$max\\_count = max(prime\\_factors\\_q_{0}, prime\\_factors\\_q_{1}, prime\\_factors\\_q_{y})$$
+$$max\\\_count = max(prime\\\_factors\\\_q_{0}, prime\\\_factors\\\_q_{1}, prime\\\_factors\\\_q_{y})$$
 
 On a la relation :
 $$max\\_count \le count(prime\\_factors) - min\\_count$$
